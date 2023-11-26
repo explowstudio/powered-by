@@ -12,7 +12,7 @@ class PoweredBy extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <a href="https://explow.studio" class="powered-by" target="_blank">
-        Powered by <img src="../../assets/logo.svg" alt="Explow" />
+        Powered by <img src="./assets/logo.svg" alt="Explow" />
       </a>
     `;
   }

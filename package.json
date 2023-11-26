@@ -15,13 +15,11 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/explow-studio-powered-by.es.js",
-      "require": "./dist/explow-studio-powered-by.umd.js"
+      "import": "./dist/main.js"
     },
     "./dist/style.css": "./dist/style.css"
   },
-  "main": "./dist/explow-studio-powered-by.umd.js",
-  "module": "./dist/explow-studio-powered-by.es.js",
+  "main": "./dist/main.js",
   "dependencies": {
     "@storybook/html": "^7.5.3",
     "react": "^18.2.0",
@@ -44,7 +42,6 @@
     "eslint-plugin-react-refresh": "^0.4.4",
     "typescript": "^5.2.2",
     "vite": "^5.0.0",
-    "vite-plugin-dts": "^3.6.3",
-    "vite-plugin-virtual": "^0.2.0"
+    "vite-plugin-static-copy": "^1.0.0"
   }
 }
