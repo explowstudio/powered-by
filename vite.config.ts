@@ -9,14 +9,22 @@ import * as packageJson from "./package.json";
 export default defineConfig({
   plugins: [react()],
   build: {
-    lib: {
-      entry: resolve("src", "react", "index.ts"),
-      name: "PoweredBy",
-      formats: ["es", "umd"],
-      fileName: (format) => `explow-studio-powered-by.${format}.js`,
-    },
     rollupOptions: {
-      external: [...Object.keys(packageJson.dependencies)],
+      input: {
+        main: resolve(__dirname, "src", "react", "index.ts"),
+        poweredByElement: resolve(
+          __dirname,
+          "src",
+          "html",
+          "powered-by.element.js"
+        ),
+      },
+      output: {
+        entryFileNames: "[name].js",
+        chunkFileNames: "[name].js",
+        format: "es",
+        dir: "dist",
+      },
     },
   },
 });
