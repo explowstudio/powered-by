@@ -12,6 +12,8 @@ on:
           - minor
           - major
 
+permissions: write-all
+
 jobs:
   version:
     name: Create new version ${{ github.event.inputs.version }}
