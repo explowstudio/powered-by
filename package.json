@@ -13,12 +13,6 @@
   "files": [
     "dist"
   ],
-  "exports": {
-    ".": {
-      "import": "./dist/main.js"
-    },
-    "./dist/style.css": "./dist/style.css"
-  },
   "main": "./dist/main.js",
   "dependencies": {
     "@storybook/html": "^7.5.3",
