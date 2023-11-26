@@ -19,22 +19,29 @@ pnpm add @explowstudio/powered-by
 
 ## Usage
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Html
 
-- Configure the top-level `parserOptions` property like this:
+To use the HTML version, it's important to pay attention to the version of the package being imported in the script. The component is a custom element, so we need the HTML script in the same way it's assembled in the example:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="https://unpkg.com/@explowstudio/powered-by@0.1.4/dist/poweredByElement.js" defer></script>
+</head>
+<body>
+  <powered-by></powered-by>
+</body>
+</html>
+```
+### React
+
+```tsx
+import { PoweredBy } from '@explowstudio/powered-by'
+
+function Component() {
+  return <PoweredBy />
 }
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
