@@ -1,8 +1,9 @@
 {
   "name": "@explowstudio/powered-by",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
+  "author": "Gabriel Teodoro",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -26,6 +27,11 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/explowstudio/powered-by"
+  },
+  "homepage": "https://github.com/explowstudio/powered-by#readme",
   "devDependencies": {
     "@explowstudio/eslint-config": "^1.1.0",
     "@types/react": "^18.2.37",
